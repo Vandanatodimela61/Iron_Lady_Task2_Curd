@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iron Lady - Learner Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>👩‍🎓 Learner Enquiry Management System</h2>
+
+    <div class="form">
+        <input type="text" id="name" placeholder="Learner Name">
+        <input type="text" id="program" placeholder="Interested Program">
+        <button onclick="addLearner()">Add Learner</button>
+    </div>
+
+    <p id="message"></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Program</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Data will come here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
