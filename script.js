@@ -9,7 +9,7 @@ function addLearner() {
         return;
     }
 
-    learners.push({ name: name, program: program });
+    learners.push({ name, program });
 
     document.getElementById("name").value = "";
     document.getElementById("program").value = "";
@@ -45,11 +45,19 @@ function editLearner(index) {
     if (newName && newProgram) {
         learners[index].name = newName;
         learners[index].program = newProgram;
+
+        document.getElementById("message").innerText =
+            "✏️ Learner updated successfully";
+
         displayLearners();
     }
 }
 
 function deleteLearner(index) {
     learners.splice(index, 1);
+
+    document.getElementById("message").innerText =
+        "🗑️ Learner deleted successfully";
+
     displayLearners();
 }
